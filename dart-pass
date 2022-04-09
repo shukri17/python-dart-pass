@@ -1,52 +1,54 @@
-abstract class Animal{
- void printName();
- void  printSound();
-}
-class Dog extends Animal {
- @override
-   printName() {
-    print("Name :dog");
-  }
 
- @override
-   printSound() {
-    print("Braking");
-    throw UnimplementedError();
-  }
+abstract class Animal {
+  printName();
+  printSound();
 }
-class Cat extends Dog{
+
+class Dog extends Animal {
   @override
   printName() {
-  print("Cat");}
-
-@override
-  void printSound() {
-  print("Mewo");
-  throw UnimplementedError();
-  }
+    print("name :Dog ");
   }
 
-class Cow extends Cat{
   @override
-  void printName() {
-    print("Name :Cow");}
-
-  @override
-  void printSound() {
-    print("Maa");
-    throw UnimplementedError();
+  printSound() {
+    print("Dog Sound Braking");
   }
 }
 
- main(){
-  var a1=Dog();
-  var a2=Cat();
-  var a3=Cow();
-  a1.printName();
-  a1.printSound();
-  a2.printName();
-  a2.printSound();
-  a3.printName();
-  a3.printSound();
+class Cat extends Animal {
+  @override
+  printName() {
+    print("Name :Cat");
+  }
 
+  @override
+  printSound() {
+    print("Cat Sound meaw");
+  }
+}
+
+class Cow extends Animal {
+  @override
+  printName() {
+    print("Name : Cow ");
+  }
+
+  @override
+  printSound() {
+    print("Cow sound is  moo");
+  }
+}
+
+main() {
+
+  var dog = Dog();
+  dog.printName();
+  dog.printSound();
+  var c1 = Cat();
+  c1.printName();
+  c1.printSound();
+  var c2= Cow();
+  c2.printName();
+  c2.printSound();
 }
