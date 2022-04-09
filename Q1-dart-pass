@@ -1,0 +1,8 @@
+//Date.Timenow cant be const because time is changed but we can use var .
+
+void main() {
+
+  var hour= DateTime.now().hour;
+  print(hour);
+
+}
