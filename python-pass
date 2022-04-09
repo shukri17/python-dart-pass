@@ -1,0 +1,13 @@
+lst=[]
+n = int(input("Enter number of elements : "))
+
+
+
+for i in range(0,n):
+   e = int(input())
+   lst.append(e)
+for i in lst:
+ if (i % 2) != 0:
+  print(i," is odd number")
+ else:
+           print(i," is even number")
